@@ -21,6 +21,10 @@ package com.netflix.loadbalancer;
 /**
  * Class that is responsible to Filter out list of servers from the ones 
  * currently available in the Load Balancer
+ *
+ * 从负载均衡器LoadBalancer的服务器列表里面筛选出可用的Server，它无非就是规定了Server来源：来自于负载均衡器LB，
+ * 这种可用/不可用是通过指标收集库/存储库LoadBalancerStats计算出来的
+ *
  * @author stonse
  *
  * @param <T>

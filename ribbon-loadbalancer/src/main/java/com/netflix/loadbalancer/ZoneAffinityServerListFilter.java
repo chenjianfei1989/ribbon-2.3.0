@@ -39,7 +39,9 @@ import java.util.List;
  * passed into this class during initialization. When turned on, servers outside the same zone (as 
  * indicated by {@link Server#getZone()}) will be filtered out. By default, zone affinity 
  * and exclusivity are turned off and nothing is filtered out.
- * 
+ *
+ * 它借助于ZoneAffinityPredicate来过滤出和zone相关的服务器，即：只留下指定zone下的Server们。
+ *
  * @author stonse
  *
  */
