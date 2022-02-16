@@ -1,0 +1,6 @@
+ServerList：可以响应客户端的特定服务的服务器列表
+ServerListFilter：可以动态获得的具有所需特征的候选服务器列表的过滤器
+ServerListUpdater：用于执行动态服务器列表更新
+IRule：负载均衡策略，用于确定从服务器列表返回哪个服务器
+IPing：客户端用于快速检查服务器当时是否处于活动状态（心跳检测）
+ILoadBalancer：负载均衡器，负责负载均衡调度的管理
