@@ -67,6 +67,8 @@ import com.netflix.client.config.IClientConfigKey;
  * @author stonse
  * 
  * @deprecated Use {@link WeightedResponseTimeRule}
+ *
+ * 已标记为过期，请使用WeightedResponseTimeRule代替。
  * 
  * @see WeightedResponseTimeRule
  * 

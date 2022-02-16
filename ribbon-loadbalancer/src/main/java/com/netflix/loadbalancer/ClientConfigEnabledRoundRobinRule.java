@@ -22,6 +22,8 @@ import com.netflix.client.config.IClientConfig;
 /**
  * This class essentially contains the RoundRobinRule class defined in the
  * loadbalancer package
+ *
+ * 它选择策略的实现很简单，内部定义了RoundRobinRule，choose方法还是采用了RoundRobinRule的choose方法，所以它的选择策略和RoundRobinRule的选择策略一致。
  * 
  * @author stonse
  * 

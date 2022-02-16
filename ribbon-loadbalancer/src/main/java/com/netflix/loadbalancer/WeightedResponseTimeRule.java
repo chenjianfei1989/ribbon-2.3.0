@@ -64,7 +64,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * else if (random_number between 81 &amp; 100) {send request to D;}
  * <p>
  * When there is not enough statistics gathered for the servers, this rule
- * will fall back to use {@link RoundRobinRule}. 
+ * will fall back to use {@link RoundRobinRule}.
+ *
+ *
+ *
+ * 它继承自轮询算法，相较于它，增加了响应时间作为权重，为每个Server动态分配权重，然后按照权重轮询（加权循环）。
+ *
  * @author stonse
  */
 public class WeightedResponseTimeRule extends RoundRobinRule {

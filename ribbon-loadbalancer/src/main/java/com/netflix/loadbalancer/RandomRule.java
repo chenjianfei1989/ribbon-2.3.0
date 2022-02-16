@@ -25,7 +25,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * A loadbalacing strategy that randomly distributes traffic amongst existing
  * servers.
- * 
+ * 随机规则：使用ThreadLocalRandom.current().nextInt(serverCount)随机选择一个Server
  * @author stonse
  * 
  */

@@ -21,6 +21,9 @@ import com.netflix.client.IClientConfigAware;
 
 /**
  * Class that provides a default implementation for setting and getting load balancer
+ *
+ * 该抽象类仅事把IRule和ILoadBalancer完成绑定，所以根据Rule选择的Server列表均来自ILoadBalancer内
+ *
  * @author stonse
  *
  */

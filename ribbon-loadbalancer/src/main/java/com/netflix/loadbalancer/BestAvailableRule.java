@@ -28,7 +28,11 @@ import java.util.List;
  * concurrent requests among a small number of servers. Also, each client will get a random list of 
  * servers which avoids the problem that one server with the lowest concurrent requests is 
  * chosen by a large number of clients and immediately gets overwhelmed.
- * 
+ *
+ * 最小并发数规则
+ *
+ * BestAvailableRule继承自ClientConfigEnabledRoundRobinRule。该策略的特性跳过已经被熔断的实例，并且顺表找出最空闲的实例。
+ * BestAvailable：最空闲、最可用的（也就是并发请求数最低的）。很明显，统计数据来自云LoadBalancerStats/ServerStats。
  * @author awang
  *
  */

@@ -22,7 +22,9 @@ import com.netflix.client.config.IClientConfig;
 /**
  * Given that
  * {@link IRule} can be cascaded, this {@link RetryRule} class allows adding a retry logic to an existing Rule.
- * 
+ *
+ * 重试规则：它可以包装一个IRule subRule（默认是RoundRobinRule），当一个周期内没找到Server时，进行重试
+ *
  * @author stonse
  * 
  */

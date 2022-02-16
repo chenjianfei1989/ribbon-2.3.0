@@ -27,6 +27,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * The most well known and basic load balancing strategy, i.e. Round Robin Rule.
  *
+ * 轮循算法实现，最广为人知和最基本的负载均衡策略（也叫线性轮询），算法也比较容易理解。
  * @author stonse
  * @author <a href="mailto:nikos@netflix.com">Nikos Michalakis</a>
  *

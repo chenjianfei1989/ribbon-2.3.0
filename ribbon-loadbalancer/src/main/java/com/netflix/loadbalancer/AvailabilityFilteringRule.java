@@ -39,6 +39,9 @@ import com.netflix.servo.annotations.Monitor;
  * }</pre>
  *
  * <p>
+ *
+ *     用性过滤规则
+ *     它依赖于AvailabilityPredicate完成过滤后，在使用线性轮询方式选择Server。
  *   
  * @author awang
  *
