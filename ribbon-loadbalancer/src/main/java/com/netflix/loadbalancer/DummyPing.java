@@ -21,6 +21,8 @@ import com.netflix.client.config.IClientConfig;
 
 /**
  * Default simple implementation that marks the liveness of a Server
+ *
+ * 仿制品，假的，仿真的。它是AbstractLoadBalancerPing的一个空实现~
  * 
  * @author stonse
  * 

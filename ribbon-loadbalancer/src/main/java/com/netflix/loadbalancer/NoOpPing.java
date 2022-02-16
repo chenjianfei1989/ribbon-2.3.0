@@ -19,6 +19,9 @@ package com.netflix.loadbalancer;
 
 /**
  * No Op Ping
+ *
+ * 它比PingConstant更狠，永远返回true。
+ *
  * @author stonse
  *
  */

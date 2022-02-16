@@ -41,6 +41,8 @@ import java.io.IOException;
  * HealthChecks.
  * 
  * Choose your Ping based on your needs.
+ *
+ * 使用发送真实的Http请求的方式来做健康检查，若返回的状态码是200就证明能够ping通，返回true
  * 
  * @author stonse
  * 

@@ -20,6 +20,9 @@ package com.netflix.loadbalancer;
 /**
  * A utility Ping Implementation that returns whatever its been set to return
  * (alive or dead)
+ *
+ * 永远返回一个bool常量：true or false。
+ *
  * @author stonse
  *
  */

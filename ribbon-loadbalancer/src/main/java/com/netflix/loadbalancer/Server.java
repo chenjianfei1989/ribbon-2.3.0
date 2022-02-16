@@ -22,6 +22,8 @@ import com.netflix.util.Pair;
 /**
  * Class that represents a typical Server (or an addressable Node) i.e. a
  * Host:port identifier
+ *
+ * 它代表一台服务器/实例，包含Host:port所以可以定位到目标服务器，并且还有一些状态标志属性
  * 
  * @author stonse
  * 
@@ -56,14 +58,24 @@ public class Server {
          */
         public String getInstanceId();
     }
-
+    // 未知Zone区域，这是每台Server的默认区域
     public static final String UNKNOWN_ZONE = "UNKNOWN";
+    // 如192.168.1.1 / www.baidu.com
     private String host;
     private int port = 80;
+    // 有可能是http/https  也有可能是tcp、udp等
     private String scheme;
+    
+    // id表示唯一。host + ":" + port -> localhost:8080
+    // 注意没有http://前缀    只有host和端口
+    // getInstanceId实例id使用的就是它。因为ip+端口可以唯一确定一个实例
     private volatile String id;
+    // 标记是否这台机器是否是活着的
+    // =========请注意：它的默认值是false=========
     private volatile boolean isAliveFlag;
+    // Server所属的zone区域
     private String zone = UNKNOWN_ZONE;
+    // 标记这台机器是否可以准好可以提供服务了（活着并不代表可以提供服务了）
     private volatile boolean readyToServe = true;
 
     private MetaInfo simpleMetaInfo = new MetaInfo() {
@@ -99,7 +111,8 @@ public class Server {
         this.id = host + ":" + port;
         isAliveFlag = false;
     }
-
+    
+    // 因为一个id就可确定一台Server，所以这么构造是ok的
     /* host:port combination */
     public Server(String id) {
         setId(id);
@@ -110,7 +123,10 @@ public class Server {
     // The assignment should be atomic, and two setAlive calls
     // with conflicting results will still give nonsense(last one wins)
     // synchronization or no.
-
+    
+    // 此方法并非是synchronization同步的，所以其实存在线程不安全的情况
+    // （volatile解决不了线程同步问题）
+    // 官方解释是：遵照last win的原则也是合理的
     public void setAlive(boolean isAliveFlag) {
         this.isAliveFlag = isAliveFlag;
     }
@@ -123,7 +139,8 @@ public class Server {
     public void setHostPort(String hostPort) {
         setId(hostPort);
     }
-
+    // 规范化id，依赖于上面的getHostPort()方法
+    // 任何uri（id）最终都会被规范为 ip + ":" + port的方式
     static public String normalizeId(String id) {
         Pair<String, Integer> hostPort = getHostPort(id);
         if (hostPort == null) {
@@ -143,7 +160,10 @@ public class Server {
         }
         return null;
     }
-
+    // 从字符串里解析传ip和端口号
+    // http://www.baidu.com -> www.baidu.com + 80
+    // https://www.baidu.com/api/v1/node -> www.baidu.com + 443
+    // localhost:8080 -> localhost + 8080
     static Pair<String, Integer> getHostPort(String id) {
         if (id != null) {
             String host = null;

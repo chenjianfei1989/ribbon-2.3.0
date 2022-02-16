@@ -30,6 +30,8 @@ public interface IPing {
     /**
      * Checks whether the given <code>Server</code> is "alive" i.e. should be
      * considered a candidate while loadbalancing
+     *
+     * 检查给定的Server是否为“活动的”，这为在负载平衡时选出一个可用的候选Server
      * 
      */
     public boolean isAlive(Server server);
