@@ -21,7 +21,9 @@ package com.netflix.loadbalancer;
  * Interface that defines a "Rule" for a LoadBalancer. A Rule can be thought of
  * as a Strategy for loadbalacing. Well known loadbalancing strategies include
  * Round Robin, Response Time based etc.
- * 
+ *
+ * 负载均衡策略，用于确定从服务器列表返回哪个服务器
+ *
  * @author stonse
  * 
  */

@@ -19,6 +19,9 @@ package com.netflix.loadbalancer;
 
 /**
  * Interface that defines how we "ping" a server to check if its alive
+ *
+ * 客户端用于快速检查服务器当时是否处于活动状态（心跳检测）
+ *
  * @author stonse
  *
  */
