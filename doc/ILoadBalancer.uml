@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.netflix.loadbalancer.ILoadBalancer</OriginalElement>
+  <nodes>
+    <node x="406.75" y="222.0">com.netflix.loadbalancer.AbstractLoadBalancer</node>
+    <node x="0.0" y="1448.0">com.netflix.loadbalancer.DynamicServerListLoadBalancer</node>
+    <node x="394.0" y="1668.0">com.netflix.loadbalancer.ServerStatusChangeListenerTest.NoPingTaskLoadBalancer</node>
+    <node x="623.0" y="777.5">com.netflix.loadbalancer.NoOpLoadBalancer</node>
+    <node x="31.5" y="1969.0">com.netflix.loadbalancer.ZoneAwareLoadBalancer</node>
+    <node x="424.25" y="0.0">com.netflix.loadbalancer.ILoadBalancer</node>
+    <node x="103.0" y="375.0">com.netflix.loadbalancer.BaseLoadBalancer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.netflix.loadbalancer.BaseLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-511.5" />
+      <point x="353.0" y="350.0" />
+      <point x="569.25" y="350.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ZoneAwareLoadBalancer" target="com.netflix.loadbalancer.DynamicServerListLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-51.5" />
+      <point x="0.0" y="235.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.AbstractLoadBalancer" target="com.netflix.loadbalancer.ILoadBalancer" relationship="REALIZATION">
+      <point x="0.0" y="-51.5" />
+      <point x="0.0" y="86.0" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.NoOpLoadBalancer" target="com.netflix.loadbalancer.AbstractLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-109.0" />
+      <point x="785.5" y="350.0" />
+      <point x="569.25" y="350.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ServerStatusChangeListenerTest.NoPingTaskLoadBalancer" target="com.netflix.loadbalancer.BaseLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="519.0" y="1423.0" />
+      <point x="353.0" y="1423.0" />
+      <point x="0.0" y="511.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.DynamicServerListLoadBalancer" target="com.netflix.loadbalancer.BaseLoadBalancer" relationship="GENERALIZATION">
+      <point x="0.0" y="-235.5" />
+      <point x="187.0" y="1423.0" />
+      <point x="353.0" y="1423.0" />
+      <point x="0.0" y="511.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.4101338432122371" showDependencies="false" x="474.0" y="1036.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
