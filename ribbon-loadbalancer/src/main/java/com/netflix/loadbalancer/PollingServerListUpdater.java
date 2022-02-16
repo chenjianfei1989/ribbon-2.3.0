@@ -17,6 +17,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * A default strategy for the dynamic server list updater to update.
  * (refactored and moved here from {@link com.netflix.loadbalancer.DynamicServerListLoadBalancer})
  *
+ * 动态服务器列表更新器要更新的默认实现，使用一个任务调度器ScheduledThreadPoolExecutor完成定时更新。
+ *
  * @author David Liu
  */
 public class PollingServerListUpdater implements ServerListUpdater {

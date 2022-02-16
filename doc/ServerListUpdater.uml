@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.netflix.loadbalancer.ServerListUpdater</OriginalElement>
+  <nodes>
+    <node x="174.25" y="0.0">com.netflix.loadbalancer.ServerListUpdater</node>
+    <node x="310.0" y="222.0">com.netflix.niws.loadbalancer.EurekaNotificationServerListUpdater</node>
+    <node x="0.0" y="233.5">com.netflix.loadbalancer.PollingServerListUpdater</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.netflix.niws.loadbalancer.EurekaNotificationServerListUpdater" target="com.netflix.loadbalancer.ServerListUpdater" relationship="REALIZATION">
+      <point x="0.0" y="-97.5" />
+      <point x="493.5" y="197.0" />
+      <point x="319.25" y="197.0" />
+      <point x="0.0" y="86.0" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.PollingServerListUpdater" target="com.netflix.loadbalancer.ServerListUpdater" relationship="REALIZATION">
+      <point x="0.0" y="-86.0" />
+      <point x="145.0" y="197.0" />
+      <point x="319.25" y="197.0" />
+      <point x="0.0" y="86.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="338.5" y="208.5" />
+  <SelectedNodes>
+    <node>com.netflix.loadbalancer.PollingServerListUpdater</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
