@@ -27,7 +27,9 @@ import com.netflix.client.config.IClientConfig;
 /**
  * Utility class that can load the List of Servers from a Configuration (i.e
  * properties available via Archaius). The property name be defined in this format:
- * 
+ *
+ * 它可以从Configuration配置中加载服务器列表的实用工具实现类
+ *
  * <pre>{@code
 <clientName>.<nameSpace>.listOfServers=<comma delimited hostname:port strings>
 }</pre>

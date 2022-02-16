@@ -28,13 +28,14 @@ import java.util.List;
  * @param <T>
  */
 public interface ServerList<T extends Server> {
-
+    
+    //返回初始状态的服务器列表。比如初试配置了10台那它永远是10个Server
     public List<T> getInitialListOfServers();
     
     /**
      * Return updated list of servers. This is called say every 30 secs
      * (configurable) by the Loadbalancer's Ping cycle
-     * 
+     * 返回更新后的服务列表。它会周期ping过后，返回活着的
      */
     public List<T> getUpdatedListOfServers();   
 

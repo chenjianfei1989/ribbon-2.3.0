@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.netflix.loadbalancer.ServerList</OriginalElement>
+  <nodes>
+    <node x="0.0" y="829.0">com.netflix.loadbalancer.ConfigurationBasedServerList</node>
+    <node x="225.0" y="0.0">com.netflix.loadbalancer.Server</node>
+    <node x="130.5" y="699.0">com.netflix.loadbalancer.AbstractServerList</node>
+    <node x="136.75" y="567.0">com.netflix.loadbalancer.ServerList</node>
+    <node x="331.0" y="806.0">com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList" target="com.netflix.loadbalancer.AbstractServerList" relationship="GENERALIZATION">
+      <point x="0.0" y="-86.0" />
+      <point x="542.5" y="781.0" />
+      <point x="349.0" y="781.0" />
+      <point x="0.0" y="28.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ServerList" target="com.netflix.loadbalancer.Server" relationship="DEPENDENCY">
+      <point x="0.0" y="-40.0" />
+      <point x="274.75" y="542.0" />
+      <point x="349.0" y="542.0" />
+      <point x="0.0" y="258.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.ConfigurationBasedServerList" target="com.netflix.loadbalancer.AbstractServerList" relationship="GENERALIZATION">
+      <point x="0.0" y="-63.0" />
+      <point x="155.5" y="781.0" />
+      <point x="349.0" y="781.0" />
+      <point x="0.0" y="28.5" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.AbstractServerList" target="com.netflix.loadbalancer.ServerList" relationship="REALIZATION">
+      <point x="-109.25" y="-28.5" />
+      <point x="239.75" y="673.0" />
+      <point x="274.75" y="673.0" />
+      <point x="0.0" y="40.0" />
+    </edge>
+    <edge source="com.netflix.loadbalancer.AbstractServerList" target="com.netflix.loadbalancer.Server" relationship="DEPENDENCY">
+      <point x="109.25" y="-28.5" />
+      <point x="458.25" y="673.0" />
+      <point x="423.25" y="673.0" />
+      <point x="423.25" y="542.0" />
+      <point x="349.0" y="542.0" />
+      <point x="0.0" y="258.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8597194388777555" showDependencies="false" x="377.0" y="489.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
